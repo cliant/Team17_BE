@@ -30,7 +30,7 @@ public class TeamTagController {
     public ResponseEntity<TeamTagResponse> getTeamTagList(
             @LoginMember MemberDTO memberDTO
     ) {
-        return new ResponseEntity<>(teamTagService.getTeamTagList(), HttpStatus.OK);
+        return new ResponseEntity<>(new TeamTagResponse(teamTagService.getAllTeamTagList()), HttpStatus.OK);
     }
 
     @PostMapping

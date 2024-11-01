@@ -54,16 +54,6 @@ public class TeamTagService {
                 .toList();
     }
 
-    public TeamTagResponse getTeamTagList() {
-
-        List<TeamTagDTO> teamTagList = teamTagRepository.findAll()
-                .stream()
-                .map(TeamTagDTO::from)
-                .toList();
-
-        return new TeamTagResponse(teamTagList);
-    }
-
     @Transactional
     public void addTeamTag(TeamTagRequest teamTagRequest){
 

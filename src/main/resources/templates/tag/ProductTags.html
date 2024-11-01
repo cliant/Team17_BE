@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Tag List</title>
+    <link rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+    <h1>Product Tag List</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tag Name</th>
+            <th>Tag Attribute</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="tag : ${productTags}">
+            <td th:text="${tag.tagId}">1</td>
+            <td th:text="${tag.teamTagName}">Tag Name</td>
+            <td th:text="${tag.teamTagAttribute">Tag Attribute</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
